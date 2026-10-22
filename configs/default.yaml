@@ -1,0 +1,34 @@
+project: "Attention-U-Net-Glacier-Segmentation"
+description: "8-Channel Attention U-Net for Glacier Segmentation using Sentinel-2 and RGI 14"
+
+data:
+  data_dir: "data/patches"
+  image_size: [256, 256]
+  in_channels: 8
+  out_channels: 1
+  train_val_split: 0.8
+  batch_size: 8
+  num_workers: 2
+
+model:
+  name: "AttentionUNet"
+  in_channels: 8
+  out_channels: 1
+  features: [64, 128, 256, 512, 1024]
+
+training:
+  epochs: 15
+  lr: 0.0002
+  weight_decay: 0.0001
+  alpha_bce_dice: 0.5
+  optimizer: "AdamW"
+  scheduler: "CosineAnnealingLR"
+  device: "cuda"
+  checkpoint_dir: "outputs/checkpoints"
+  save_best_only: true
+
+inference:
+  threshold: 0.70
+  patch_size: 256
+  stride: 128
+  output_dir: "outputs/predictions"
