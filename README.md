@@ -8,7 +8,7 @@
 An independent, production-grade Deep Learning framework implementing an **8-Channel Attention U-Net** for automated, high-precision glacier and glacial lake segmentation in rugged alpine terrain using Copernicus Sentinel-2 multispectral imagery and Randolph Glacier Inventory (RGI) reference labels.
 
 - **Academic Context**: B.Tech Information Technology (7th Semester Minor Project), National Institute of Technology (NIT) Raipur.
-- **Author**: Piyush Verma
+- **Author**: Piyush Verma, Deepanshu Sahu, Rameshwar Chandravanshi.
 
 ---
 
